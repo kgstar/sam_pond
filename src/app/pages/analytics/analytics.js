@@ -5,17 +5,18 @@
 (function () {
   'use strict';
 
-  angular.module('BlurAdmin.pages.home', [])
+  angular.module('BlurAdmin.pages.analytics', [])
       .config(routeConfig);
 
   /** @ngInject */
   function routeConfig($stateProvider) {
     $stateProvider
-        .state('home', {
-          url: '/home',
-          templateUrl: 'app/pages/home/home.html',
-          title: 'Home',
+        .state('analytics', {
+          url: '/analytics',
+          templateUrl: 'app/pages/analytics/analytics.html',
+          title: 'Analytics',
           sidebarMeta: {
+            icon: 'ion-stats-bars',
             order: 800,
           },
         });

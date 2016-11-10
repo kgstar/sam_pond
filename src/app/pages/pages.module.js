@@ -9,22 +9,25 @@
     'ui.router',
 
     'BlurAdmin.pages.dashboard',
-    'BlurAdmin.pages.ui',
+/*     'BlurAdmin.pages.ui',
     'BlurAdmin.pages.components',
-    'BlurAdmin.pages.form',
+   'BlurAdmin.pages.form',
     'BlurAdmin.pages.tables',
     'BlurAdmin.pages.charts',
     'BlurAdmin.pages.maps',
     'BlurAdmin.pages.profile',
-		
-    'BlurAdmin.pages.home',
+		*/
+    'BlurAdmin.pages.inbox',
+    'BlurAdmin.pages.analytics'/*,
+    'BlurAdmin.pages.proximgene',
+    'BlurAdmin.pages.templates',*/
   ])
       .config(routeConfig);
 
   /** @ngInject */
   function routeConfig($urlRouterProvider, baSidebarServiceProvider) {
-    $urlRouterProvider.otherwise('/home');
-
+    $urlRouterProvider.otherwise('/dashboard');
+/*
     baSidebarServiceProvider.addStaticItem({
       title: 'Pages',
       icon: 'ion-document',
@@ -45,6 +48,7 @@
         blank: true
       }]
     });
+
     baSidebarServiceProvider.addStaticItem({
       title: 'Menu Level 1',
       icon: 'ion-ios-more',
@@ -58,7 +62,7 @@
           disabled: true
         }]
       }]
-    });
+    });*/
   }
 
 })();
